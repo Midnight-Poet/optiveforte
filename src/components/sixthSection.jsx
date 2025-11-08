@@ -98,7 +98,7 @@ export let SixthSection = () => {
 								</button>
 							</div>
 
-							<div className='h-0 overflow-hidden absolute top-full -z-10 bg-dark-black-200 text- px-4 py-5 shadow-2xl rounded-2xl transition-[height] duration-500'>
+							<div className='h-0 overflow-auto absolute top-full -z-10 bg-dark-black-200 text- px-4 py-5 shadow-2xl rounded-2xl transition-[height] duration-500'>
 								<p
 									className=' transition duration-500'
 									ref={item}
