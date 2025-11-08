@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: #0A9642;
+  --color-primary-2: #FE5716;
+  --color-primary-3: #545454;
+  --color-primary-4: #1E56A1;
+  --color-secondary-1: #7E7E7E;
+  --color-secondary-2: #17195A;
+  --color-paragraph: #DADADA;
+  --color-bg-1: #1E56A1CC;
+  --color-trans: #000000af;
+  --color-dark-black-50: #F4F4F4;
+  --color-dark-black-100: #F1F3F4;
+  --color-dark-black-800: #3C4043;
+  --color-dark-black-200: #E8EAED;
+  --color-dark-black-300: #DADCE0;
+  --color-dark-black-400: #BDC1C6;
+  --color-dark-black-500: #9AA0A6;
+  --color-dark-black-600: #80868B;
+  --color-dark-black-700: #5F6368;
+  --color-dark-black-846: #2E3134;
+  --color-dark-black-900: #202124;
+  --color-dark-black-928: #17181B;
+  --color-dark-black-868: #282A2D;
+  --color-dark-black-958: #0E1013;
+  --font-urbanist: 'Urbanist', sans-serif;
+  /* --breakpoint-md: 900px; */
+
+}
+
+@layer base {
+  * {
+    @apply font-urbanist
+  }
+
+  body {
+    /* @apply overflow-x-hidden */
+  }
+}
+
+@layer components {
+  .fixed-image {
+    /* background-image: url(./assets/solar1.jpg); */
+  }
+
+  .before {
+    /* @apply before:absolute before:bg-blue-500 before:-rotate-45 before:transform
+    before:h-[150%] before:w-[60%] before:-z-10 before:rounded-[150px] before:-top-40 */
+
+  }
+
+  .active {
+    @apply border-4 border-primary-2
+  }
+  .inactive {
+    @apply border-4 border-primary
+  }
+
+  .bg-image {
+    background-color: #000000af;
+    background-size: 100% 120%;
+    background-position: top;
+    background-repeat: no-repeat;
+    @apply sm:bg-cover
+  }
+
+  .disgrid {
+    &>div {
+      &:nth-child(1) {
+        @apply col-span-1 row-start-2 col-start-1
+      }
+
+      &:nth-child(2) {}
+
+      &:nth-child(3) {
+        @apply col-span-2 row-span-1 col-start-3 row-start-1
+      }
+
+      &:nth-child(4) {
+        @apply col-span-2 row-span-1 col-start-1 col-end-3 row-start-1
+      }
+
+      &:nth-child(5) {
+        @apply col-span-2
+      }
+    }
+  }
+
+  .fade {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .fade.in {
+    opacity: 1;
+  }
+
+  .fade.out {
+    opacity: 0;
+  }
+  .slide {
+    transition: translate .5s ease-in-out
+  }
+  .slide.in {
+    translate: 0;
+  }
+  .slide.out {
+    translate: 100%;
+  }
+
+}
