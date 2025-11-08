@@ -55,7 +55,7 @@ export let FourthSection = () => {
 				detail
 				<hr className='w-1/5  my-2 mx-auto border-primary-4 border' />
 			</header>
-			<div className='p-2 mt-15 flex flex-wrap items justify-between [&>div:nth-child(2)]:-mt-8 [&>div:nth-child(2)]:h-max [&>div:nth-child(5)]:h-max [&>div:nth-child(5)]:-mt-8'>
+			<div className='p-2 mt-15 flex flex-wrap items justify-between [&>div:nth-child(2)]:sm:-mt-8 [&>div:nth-child(2)]:h-max [&>div:nth-child(5)]:h-max [&>div:nth-child(5)]:sm:-mt-8'>
 				{items.map((item) => {
 					return (
 						<Card
