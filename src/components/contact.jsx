@@ -16,11 +16,11 @@ export let Contact = () => {
 					solar technologies.
 				</p>
 			</div>
-			<form action='' className="text-black w-full sm:w-2/5 sm:-mb-20 md:-mb-30 [&>input]:bg-white [&>input]:mb-4 [&>input]:p-2 [&>input]:rounded-xl [&>input]:outline-none [&>input]:w-full bg-primary px-3 py-5 rounded-2xl mt-6">
+			<form action='' className="text-black w-full sm:w-2/5 sm:-mb-20 md:-mb-30 [&>input]:bg-white [&>input]:mb-4 [&>input]:p-2 [&>input]:rounded-[5px] [&>input]:outline-none [&>input]:w-full bg-primary px-3 py-5 rounded-xl mt-6">
                 <input type="text" name="" placeholder="Enter Full Name" />
                 <input type="email" name="" placeholder="Enter Email" />
                 <input type="tel" name="" placeholder="Enter Phone Number" />
-                <textarea placeholder="Enter Your Message" className="w-full h-30 rounded-xl p-2 bg-white outline-none"></textarea>
+                <textarea placeholder="Enter Your Message" className="w-full h-30 rounded-[5px] p-2 bg-white outline-none"></textarea>
                 <button type="submit" className=" text-white mt-4 bg-primary-3 px-6 py-3 rounded-3xl hover:bg-dark-black-500 transition duration-500 cursor-pointer">Send Message</button>
             </form>
 		</section>

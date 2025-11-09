@@ -47,27 +47,25 @@ export let FifthSection = () => {
 	useEffect(() => {
 		let arr = items.current.children;
 		// console.log(arr)
-
-		arr[count].classList.replace('inactive', 'active');
-
+		arr[0].classList.replace('inactive', 'active');
 		const interval = setInterval(() => {
 			setFade(false);
 
+			Object.values(arr).forEach((element) => {
+				element.classList.replace(
+					'active',
+					'inactive'
+				);
+			});
 			setTimeout(() => {
 				setCount((count += 1));
-				Object.values(arr).forEach((element) => {
-					element.classList.replace(
-						'active',
-						'inactive'
-					);
-				});
+				count == comments.length
+					? setCount((count = 0))
+					: null;
 				arr[count].classList.replace(
 					'inactive',
 					'active'
 				);
-				count == comments.length
-					? setCount((count = 0))
-					: null;
 				setFade(true);
 			}, 500);
 		}, 3000);
